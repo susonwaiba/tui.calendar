@@ -103,7 +103,7 @@ Week.prototype.render = function() {
 
     renderStartDate = new TZDate(options.renderStartDate);
     renderEndDate = new TZDate(options.renderEndDate);
-
+    renderEndDate.addDate(7);
     range = datetime.range(
         datetime.start(renderStartDate),
         datetime.end(renderEndDate),

@@ -549,7 +549,7 @@ datetime = {
         var uniformWidth = 100 / days;
         var wideWidth = days > limitDaysToApplyNarrowWeekend ? 100 / (days - 1) : uniformWidth;
         var accumulatedWidth = 0;
-        var dates = util.range(startDayOfWeek, 7).concat(util.range(days)).slice(0, 7);
+        var dates = util.range(startDayOfWeek, 14).concat(util.range(days)).slice(0, 14);
 
         if (workweek) {
             dates = util.filter(dates, function(day) {

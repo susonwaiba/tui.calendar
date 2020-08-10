@@ -42,11 +42,77 @@
   <script src="./js/data/calendars.js"></script>
   <script src="./js/data/schedules.js"></script>
   <script type="text/javascript" class="code-js">
-  var cal = new tui.Calendar('#calendar', {
+  var calendar = new tui.Calendar('#calendar', {
     defaultView: 'week', // set 'week' or 'day'
     taskView: true,  // e.g. true, false, or ['task', 'milestone'])
-    scheduleView: ['time']  // e.g. true, false, or ['allday', 'time'])
+    scheduleView: false  // e.g. true, false, or ['allday', 'time'])
   });
+  calendar.createSchedules([
+    {
+        id: '1',
+        calendarId: '1',
+        title: 'my schedule',
+        category: 'task',
+        dueDateClass: '',
+        start: '2020-08-09T05:00:00+09:00',
+        end: '2020-08-09T23:59:00+09:00'
+    },
+    {
+        id: '2',
+        calendarId: '1',
+        title: 'second schedule',
+        category: 'task',
+        dueDateClass: '',
+        start: '2020-08-10T05:00:00+09:00',
+        end: '2020-08-10T23:59:00+09:00'
+    },
+    {
+        id: '3',
+        calendarId: '1',
+        title: 'second schedule 3',
+        category: 'task',
+        dueDateClass: '',
+        start: '2020-08-12T05:00:00+09:00',
+        end: '2020-08-13T23:59:00+09:00'
+    },
+    {
+        id: '4',
+        calendarId: '1',
+        title: 'second schedule 4',
+        category: 'task',
+        dueDateClass: '',
+        start: '2020-08-15T05:00:00+09:00',
+        end: '2020-08-19T23:59:00+09:00'
+    },
+    {
+        id: '5',
+        calendarId: '1',
+        title: 'second schedule 5',
+        category: 'task',
+        dueDateClass: '',
+        start: '2020-08-20T05:00:00+09:00',
+        end: '2020-08-20T23:59:00+09:00'
+    },
+    {
+        id: '6',
+        calendarId: '1',
+        title: 'second schedule 6',
+        category: 'task',
+        dueDateClass: '',
+        start: '2020-08-21T05:00:00+09:00',
+        end: '2020-08-21T23:59:00+09:00'
+    },
+    {
+        id: '7',
+        calendarId: '1',
+        title: 'milestone 7',
+        category: 'milestone',
+        dueDateClass: '',
+        start: '2020-08-14T05:00:00+09:00',
+        end: '2020-08-14T23:59:00+09:00',
+        isReadOnly: true    // schedule is read-only
+    }
+]);
   </script>
   <script src="./js/default.js"></script>
 </body>
